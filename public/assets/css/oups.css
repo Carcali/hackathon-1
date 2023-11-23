@@ -1,16 +1,14 @@
-body{
-    background-image:"C:\Users\sajid\hackathon-1\public\assets\images\christmas-1869902_1920.jpg";
-   background-image:auto;
+section{
+    background-image:"assets\images\christmas-1869902_1920.jpg";
+   background-size:cover;
    height: 100%;
    width: 100%;
-   border: 100px;
    border-color: red;
-
+   background-repeat:x y;
+   justify-content: center;
 }
-
 h1{
-    align-content: center;
-    display: contents;
-
-
+   padding: 50px;;
+    background-color: rgb(151, 27, 27);
+    text-align: center;
 }
