@@ -1,0 +1,11 @@
+/* Variables */
+:root {
+    /* Couleurs */
+    --primary-color: #A60321;
+    --secondary-color: #012611;
+    --tertiary-color: #D97D48;
+    --text-color: white;
+    /* Textes */
+    --p-size: 1rem;
+    --button-size: 1.25rem;
+}
