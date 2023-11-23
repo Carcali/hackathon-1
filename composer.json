@@ -2,7 +2,7 @@
     "name": "sajid/hackathon-1",
     "autoload": {
         "psr-4": {
-            "Sajid\\Hackathon1\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
