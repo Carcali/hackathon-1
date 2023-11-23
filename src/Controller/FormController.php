@@ -5,13 +5,13 @@ namespace App\controller;
 use App\Model\formManager;
 use App\Controller\AbstractController;
 
-class formController extends AbstractController
+class FormController extends AbstractController
 {
-    public function from(): string
+    public function form(): string
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $$credentialsForm = array_map('trim', $_POST);
+            $credentialsForm = array_map('trim', $_POST);
 
             if (!isset($credentialsForm['age']) || empty($credentialsForm['age'])) {
                 $errors['age'] = 'champ obligatoire';
@@ -35,7 +35,7 @@ class formController extends AbstractController
             }
 
             if (empty($errors)) {
-                $userId = $_SESSION['user_id'];
+                $userId = $_SESSION['id'];
                 $fromManager = new fromManager();
                 $fromManager->insert($credentialsForm, $userId);
             }
