@@ -1,14 +1,14 @@
 {
-    "name": "sajid/hackathon-1",
+    "name": "utilisateur1/hackathon-1",
     "autoload": {
         "psr-4": {
-            "Sajid\\Hackathon1\\": "src/"
+            "Utilisateur1\\Hackathon1\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Sajid Salhi",
-            "email": "sajid.s35400@gmail.com"
+            "name": "Julien PRIVAT",
+            "email": "contact@julien-privat.com"
         }
     ],
     "require": {},
