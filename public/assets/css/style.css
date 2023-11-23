@@ -2,4 +2,4 @@
 @import 'assets/css/accueil.css';
 @import 'assets/css/form.css';
 @import 'assets/css/quizz.css';
-@import 'assets/css/oups.css';
+@import './assets/css/oups.css';
