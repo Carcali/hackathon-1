@@ -8,11 +8,6 @@ class OupsController extends AbstractController
 {
     public function oups()
     {
-        return $this->twig->render("oups/oups
-        
-        
-        
-        
-        o.html.twig");
+        return $this->twig->render("./oups.html.twig");
     }
 }
