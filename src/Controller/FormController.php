@@ -2,7 +2,7 @@
 
 namespace App\controller;
 
-use App\Model\formManager;
+use App\Model\FormManager;
 use App\Controller\AbstractController;
 
 class FormController extends AbstractController
@@ -40,6 +40,6 @@ class FormController extends AbstractController
                 $fromManager->insert($credentialsForm, $userId);
             }
         }
-        return $this->twig->render('form/form.html.twig', ['errors' => $errors]);
+        return $this->twig->render('formulaire/formulaire.html.twig', ['errors' => $errors]);
     }
 }

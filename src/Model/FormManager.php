@@ -7,7 +7,7 @@ class FormManager extends AbstractManager
     public const TABLE = 'lettres';
 
 
-    public function insert(array $credentialsForm,$id): int
+    public function insert(array $credentialsForm, $user_id): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (firstname, 
         lastname, age, email, message) VALUES (:firstname,  
