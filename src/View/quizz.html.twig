@@ -5,45 +5,49 @@
 <div class="div_background">
 <img src="assets/images/background-buildings-2.jpg" class="background-image_accueil">
 </div>
+<div class="uk-align-center uk-container uk-container-medium div_accueil">
+    <h2 class="titre_accueil">Quizz</h2>
+</div>
 <div class="container">
+<img src="">
 </section>
 {% endblock %}
 {% block javascript %}
 <script>
 var questions = [
     {
-        question: "Quel est le nom du plus grand désert du monde ?",
+        question: "As-tu été sage cette année ?",
         choices: [
-            "Le Sahara", "Le gobi", "L'Antarctique", "Le cerveau d'Eric Zemour"
+            "Pas trop...", "Assez", "Très"
         ],
-        answer: "L'Antarctique"
+        answer: "Très"
     },
     {
-        question: "Quel est le nom du plus petit pays du monde ?",
+        question: "Depuis combien de temps ton père est-il parti chercher la dinde ?",
         choices: [
-            "Monaco", "Le Vatican", "Tellement petit qu'on le vois pas", "Le Je menfouistan"
+            "30min", "1h", "Ils sont divorcés", "Depuis Nöel 2008"
         ],
-        answer: "Le Vatican"
+        answer: "Ils sont divorcés"
     },
     {
-        question: "Quel est le nom du plus long fleuve du monde ?",
+        question: "Nöel, chez papa ou chez maman ?",
         choices: [
-            "L'Amazone", "La Vologne", "Le Nil", "Le Fleuve"
+            "Chez papa", "Chez maman", "Où sont les cadeaux ?", "Je suis orphelin"
         ],
-        answer: "L'Amazone"
+        answer: "Je suis orphelin"
     },
     {
-        question: "Quel est le résultat de l'opération mathématique suivante : 1 + 1 ?",
+        question: "La situation marritale de ta maman",
         choices: [
-            "11", "9", "5", "7778"
+            "Mariée", "Divorcée", "Ouverte", "Fiche de contact par SMS"
         ],
-        answer: "2"
+        answer: "Ouverte"
     }, {
-        question: "Quel est le sport le plus populaire en France ?",
+        question: "Au bout de combien de verres tonton devient-il raciste ?",
         choices: [
-            "Le curling", "Le football", "Le curling", "Le curling"
+            "1", "2", "Bouteille de vin / 10", "Il s'en fou il vote Éric Zemmour"
         ],
-        answer: "Le football"
+        answer: "Il s'en fou il vote Éric Zemmour"
     }
 ];
 
@@ -99,7 +103,7 @@ function displayQuestion() {
 
 
     var buttonElement = document.createElement("button");
-    buttonElement.className = "validate";
+    buttonElement.className = "valider-la-reponse";
     buttonElement.textContent = "Valider";
     container.appendChild(buttonElement);
 
@@ -157,7 +161,7 @@ function displayResult() {
     if (score >= 3) {
         resultElement.textContent = "Bravo, tu as réussi le quizz ! Tu as obtenu " + score + " bonnes réponses sur " + questions.length + ".";
     } else {
-        resultElement.textContent = "Tu as échoué au quiz, ta lettre destinée au Père Noël sera envoyée à Yavuz Kutuk, 67000 Strasbourg, ça t’apprendra à ne pas travailler à l’école !!! Tu as obtenu " + score + " bonnes réponses sur " + questions.length + ".";
+        resultElement.textContent = "Tu as échoué au quiz, ta lettre destinée au Père (Noël) sera envoyée à Yavuz Kutuk, 67000 Strasbourg, ça t’apprendra à ne pas travailler à l’école ! Tu as obtenu " + score + " bonnes réponses sur " + questions.length + ".";
     } container.appendChild(resultElement);
 }
 
