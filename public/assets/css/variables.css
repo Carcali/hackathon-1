@@ -1,11 +1,46 @@
 /* Variables */
 :root {
+    /* Typographies */
+    --primary-font: 'Parisienne', sans-serif;
+    --secondary-font: 'Times New Roman', Times, serif;
+    --text-font: Arial, Helvetica, sans-serif;
+    --letter-font: 'Cutive Mono', sans-serif;
     /* Couleurs */
-    --primary-color: #A60321;
-    --secondary-color: #012611;
-    --tertiary-color: #D97D48;
+    --primary-color: #121631;
+    --secondary-color: #0a267a;
+    --tertiary-color: #f63f82;
     --text-color: white;
+    --text-muted-color: yellow;
+    --title-color: green;
+    --button-color: red;
     /* Textes */
-    --p-size: 1rem;
-    --button-size: 1.25rem;
+    --h2-size: 7rem;
+    --p-size: 1.5rem;
+    --button-size: 2rem;
+    /* Effets */
+    --border-radius-10: 10px;
+}
+
+@media only screen and (max-width: 460px) {
+    :root {
+        /* Typographies */
+        --primary-font: 'Parisienne', sans-serif;
+        --secondary-font: ;
+        --text-font: Arial, Helvetica, sans-serif;
+        --letter-font: ;
+        /* Couleurs */
+        --primary-color: #121631;
+        --secondary-color: #0a267a;
+        --tertiary-color: #f63f82;
+        --text-color: white;
+        --text-muted-color: yellow;
+        --title-color: green;
+        --button-color: red;
+        /* Textes */
+        --h2-size: 3rem;
+        --p-size: 1.25rem;
+        --button-size: 1.5rem;
+        /* Effets */
+        --border-radius-10: 10px;
+    }
 }

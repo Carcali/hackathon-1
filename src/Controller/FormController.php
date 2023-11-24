@@ -36,10 +36,10 @@ class FormController extends AbstractController
 
             if (empty($errors)) {
                 $userId = $_SESSION['id'];
-                $fromManager = new fromManager();
-                $fromManager->insert($credentialsForm, $userId);
+                $formManager = new FormManager();
+                $formManager->insert($credentialsForm, $userId);
             }
         }
-        return $this->twig->render('formulaire/formulaire.html.twig', ['errors' => $errors]);
+        return $this->twig->render('./form.html.twig', ['errors' => $errors]);
     }
 }

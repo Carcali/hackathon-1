@@ -1,5 +1,60 @@
-@import 'assets/css/variables.css';
-@import 'assets/css/accueil.css';
-@import 'assets/css/form.css';
-@import 'assets/css/quizz.css';
-@import './assets/css/oups.css';
+@import url('https://fonts.cdnfonts.com/css/parisienne');
+@import url('https://fonts.cdnfonts.com/css/cutive-mono');
+@import './variables.css';
+@import './accueil.css';
+@import './form.css';
+@import './quizz.css';
+@import './oups.css';
+
+/* Style général */
+
+body {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /*background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><line x1='-50%' y1='50%' x2='150%' y2='50%' style='stroke:rgba(1,0,0,0.4);stroke-width:50'/></svg>") repeat, linear-gradient(#121631, #0a267a);
+    background-size: 10px, cover;*/
+    /*linear-gradient(#121631, #0a267a);*/
+}
+
+/* Neige */
+
+.snow__item {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    will-change: box-shadow;
+    animation: snow 10000ms linear infinite;
+}
+
+.snow__item:nth-child(2) {
+    left: 25vw;
+    animation-delay: 6666ms;
+}
+
+.snow__item:nth-child(3) {
+    right: 25vw;
+    animation-delay: 3333ms;
+}
+
+@keyframes snow {
+    0% {
+        box-shadow: 0 0 0 transparent, 60vw -127vh 1px 2px #2b21f1, -60vw -99vh 5px 3px #c13a14, 58vw -107vh 1px 3px #ec9835, -87vw -50vh 2px 4px #73cc5c, 38vw -115vh 6px 5px #9a78bb, -28vw -98vh 5px 5px #1a1f76, 56vw -66vh 4px 5px #74736a, -84vw -142vh 6px 1px #f9e146, 51vw -55vh 2px 1px #18ef1f, -85vw -79vh 4px 3px #f5fc11, 8vw -87vh 1px 2px #853b89, -91vw -99vh 4px 1px #8570ee, 10vw -84vh 3px 2px #ba134a, -55vw -121vh 6px 1px #ad940e, 97vw -113vh 8px 4px #b505e2, -2vw -135vh 4px 4px #9689d6, 50vw -69vh 6px 2px #c424a9, -60vw -55vh 6px 5px #81d4de, 55vw -135vh 5px 1px #6da529, -69vw -58vh 6px 2px #30cb7d, 57vw -83vh 7px 5px #a92c70, -47vw -138vh 7px 4px #261fd8, 77vw -133vh 2px 3px #c5d85e, -75vw -114vh 4px 3px #ef106c, 63vw -53vh 5px 2px #6d0901, -65vw -103vh 8px 3px #e60724, 3vw -108vh 7px 1px #4032d6, -47vw -106vh 2px 4px #b6e853, 29vw -119vh 6px 3px #ecf1a0, -27vw -96vh 3px 2px #1c223d, 72vw -106vh 4px 4px #af56f5, -62vw -75vh 5px 1px #e5fb1c, 80vw -55vh 3px 4px #d68d1c, -39vw -143vh 1px 2px #afa0c1, 47vw -56vh 4px 1px #3f33dd, -100vw -102vh 7px 1px #b60586, 89vw -90vh 6px 5px #37c308, -91vw -110vh 8px 3px #ba08ea, 64vw -65vh 1px 3px #9b7323, -61vw -70vh 6px 3px #9a349e, 14vw -83vh 7px 5px #6d1ad8, -4vw -84vh 4px 2px #01ef27, 94vw -59vh 1px 5px #c7c792, -84vw -143vh 5px 3px #3ac043, 59vw -63vh 8px 5px #2b1267, -8vw -76vh 5px 3px #961e24, 14vw -79vh 7px 1px #727ae2, -9vw -117vh 6px 4px #ee4d2b, 1vw -81vh 3px 4px #1fc2d7, -4vw -85vh 8px 1px #430d17;
+    }
+
+    100% {
+        box-shadow: 0 0 0 transparent, 15vw 131vh 3px 1px #4becbc, -81vw 67vh 3px 2px #6d32ae, 43vw 65vh 4px 3px #858750, -51vw 74vh 8px 3px #173f68, 90vw 66vh 3px 2px #65b67e, -5vw 105vh 5px 4px #03e6ce, 77vw 118vh 6px 5px #766f19, -78vw 107vh 8px 5px #7d79ce, 75vw 95vh 6px 4px #3cb7c3, -60vw 105vh 8px 4px #b0c60f, 19vw 85vh 3px 4px #2ac697, -61vw 140vh 8px 5px #361375, 86vw 86vh 7px 5px #04879c, -29vw 59vh 3px 1px #86d0b4, 88vw 111vh 1px 2px #ede7ac, -50vw 131vh 7px 4px #83d5c2, 74vw 105vh 2px 4px #b7b46f, -98vw 97vh 6px 3px #2c4309, 44vw 57vh 4px 1px #8746ac, -23vw 67vh 3px 4px #b5bced, 17vw 103vh 1px 5px #a30896, -23vw 107vh 7px 3px #bcc123, 1vw 60vh 8px 5px #5332d4, -7vw 56vh 1px 5px #3ff643, 79vw 87vh 8px 2px #c1856f, -36vw 77vh 6px 3px #d8d293, 97vw 87vh 3px 4px #5dde5a, -50vw 97vh 8px 2px #71e405, 31vw 145vh 8px 5px #625d6f, -65vw 138vh 2px 2px #2ec3d1, 76vw 127vh 5px 3px #55ec35, -94vw 60vh 5px 4px #a167ce, 2vw 87vh 8px 3px #bae16e, -75vw 79vh 4px 5px #e87c83, 51vw 71vh 5px 2px #c586fd, -86vw 61vh 7px 2px #07c66d, 65vw 102vh 1px 4px #d0d62b, -78vw 66vh 8px 4px #4d08c4, 55vw 67vh 4px 1px #16d830, -27vw 65vh 7px 1px #912d96, 63vw 66vh 3px 4px #6f502c, -100vw 99vh 5px 3px #8d74c9, 51vw 51vh 4px 1px #abc970, -29vw 126vh 4px 4px #010e99, 10vw 145vh 2px 4px #354ca2, -18vw 112vh 1px 1px #788003, 19vw 95vh 7px 1px #adf75d, -42vw 106vh 8px 3px #2710ac, 70vw 132vh 3px 4px #31e37a, -1vw 111vh 2px 2px #da03ff;
+    }
+}

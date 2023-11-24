@@ -14,5 +14,5 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'formulaire' => ['formulaireController', 'formulaire'],
-    'oups' => ['OupsController','oups',],
+    'oups' => ['OupsController', 'oups',],
 ];

@@ -1,5 +1,49 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Mettre le form avec la lettre en fond ici</h1>
+<section class="section_accueil">
+<div class="div_background">
+    <img src="assets/images/background-buildings-2.jpg" class="background-image_accueil">
+</div>
+<div class="uk-align-center  uk-container uk-container-medium div_contact">
+    <h2 class="titre_accueil">Écris ta lettre</h2>
+</div>
+<div class="form_contact">
+<!-- Formulaire lettre à la poste -->
+<form action="/form.php" method="POST">
+			<div>
+				<label for="nom">Nom :</label>
+				<input type="text" id="nom" name="user_firstname">
+			</div>
+			<div>
+				<label for="prenom">Prenom :</label>
+				<input type="text" id="prenom" name="user_lastname">
+			</div>
+			<div>
+				<label for="city">Ville:</label>
+				<input type="text" id="city" name="user_city">
+			</div>
+			<div>
+				<label for="courriel">Courriel :</label>
+				<input type="email" id="courriel" name="user_email">
+			</div>
+			<div>
+				<label for="age">age :</label>
+				<input type="age" id="age" name="user_age">
+			</div>
+			<div>
+				<label for="message">Message :</label>
+				<textarea id="message" name="user_message"></textarea>
+			</div>
+			<div class="button">
+				<button type="submit">Envoyer votre message</button>
+			</div>
+</form>
+<!-- 3630 en gros avec la phrase en-dessous -->
+</div>
+<div class="allo-pere-noel_contact">
+<img class="uk-align-center" src="assets/images/3630.png">
+<p class="annotation_accueil">3630 3630 allô Père Nöel, appels surtaxés taux journalier de Yavuz / minute</p>
+</div>
+</section>
 {% endblock %}
