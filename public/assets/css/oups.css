@@ -1,25 +1,3 @@
-section {
-  background-image: "assets\images\christmas-1869902_1920.jpg";
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  border-color: red;
-  background-repeat: x y;
-  justify-content: center;
-}
-
-h1 {
-  padding: 50px;
-  ;
-  background-color: rgb(151, 27, 27);
-  text-align: center;
-  color: white
-}
-
-HTML SCSSResult Skip Results Iframe EDIT ON body {
-  background: #323641;
-}
-
 .letter-image {
   position: absolute;
   top: 50%;
