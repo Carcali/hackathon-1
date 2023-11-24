@@ -40,6 +40,6 @@ class FormController extends AbstractController
                 $formManager->insert($credentialsForm, $userId);
             }
         }
-        return $this->twig->render('formulaire/formulaire.html.twig', ['errors' => $errors]);
+        return $this->twig->render('./form.html.twig', ['errors' => $errors]);
     }
 }

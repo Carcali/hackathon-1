@@ -1,5 +1,170 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Tout le quizz doit apparaître ici</h1>
+<section class="section_accueil">
+<div class="div_background">
+<img src="assets/images/background-buildings-2.jpg" class="background-image_accueil">
+</div>
+<div class="uk-align-center uk-container uk-container-medium div_accueil">
+    <h2 class="titre_accueil">Quizz</h2>
+</div>
+<div class="container">
+<img src="">
+</section>
+{% endblock %}
+{% block javascript %}
+<script>
+var questions = [
+    {
+        question: "As-tu été sage cette année ?",
+        choices: [
+            "Pas trop...", "Assez", "Très"
+        ],
+        answer: "Très"
+    },
+    {
+        question: "Depuis combien de temps ton père est-il parti chercher la dinde ?",
+        choices: [
+            "30min", "1h", "Ils sont divorcés", "Depuis Nöel 2008"
+        ],
+        answer: "Ils sont divorcés"
+    },
+    {
+        question: "Nöel, chez papa ou chez maman ?",
+        choices: [
+            "Chez papa", "Chez maman", "Où sont les cadeaux ?", "Je suis orphelin"
+        ],
+        answer: "Je suis orphelin"
+    },
+    {
+        question: "La situation marritale de ta maman",
+        choices: [
+            "Mariée", "Divorcée", "Ouverte", "Fiche de contact par SMS"
+        ],
+        answer: "Ouverte"
+    }, {
+        question: "Au bout de combien de verres tonton devient-il raciste ?",
+        choices: [
+            "1", "2", "Bouteille de vin / 10", "Il s'en fou il vote Éric Zemmour"
+        ],
+        answer: "Il s'en fou il vote Éric Zemmour"
+    }
+];
+
+
+var score = 0;
+
+
+var currentQuestion = 0;
+
+
+var container = document.querySelector(".container");
+
+
+function displayQuestion() {
+    container.innerHTML = "";
+
+
+    var question = questions[currentQuestion].question;
+    var choices = questions[currentQuestion].choices;
+
+
+    var questionElement = document.createElement("p");
+    questionElement.className = "question";
+    questionElement.textContent = question;
+    container.appendChild(questionElement);
+
+
+    var choicesElement = document.createElement("ul");
+    choicesElement.className = "choices";
+    container.appendChild(choicesElement);
+
+
+    for (var i = 0; i < choices.length; i++) {
+        var choiceElement = document.createElement("li");
+        choiceElement.className = "choice";
+
+        // Créer un élément <input> de type radio pour le choix
+        var inputElement = document.createElement("input");
+        inputElement.type = "radio";
+        inputElement.name = "choice";
+        inputElement.value = choices[i];
+
+
+        var labelElement = document.createElement("label");
+        labelElement.textContent = choices[i];
+
+
+        choiceElement.appendChild(inputElement);
+        choiceElement.appendChild(labelElement);
+
+        choicesElement.appendChild(choiceElement);
+    }
+
+
+    var buttonElement = document.createElement("button");
+    buttonElement.className = "valider-la-reponse";
+    buttonElement.textContent = "Valider";
+    container.appendChild(buttonElement);
+
+
+    buttonElement.addEventListener("click", checkAnswer);
+}
+
+function checkAnswer() {
+    var buttonElement = document.querySelector(".validate");
+
+
+    var selectedChoice = document.querySelector("input[name='choice']:checked");
+
+
+    if (selectedChoice == null) {
+        alert("Veuillez sélectionner une réponse !");
+    } else {
+        var selectedValue = selectedChoice.value;
+
+        var correctAnswer = questions[currentQuestion].answer;
+
+
+        if (selectedValue == correctAnswer) {
+            score++;
+        }
+
+
+        buttonElement.disabled = true;
+
+
+        setTimeout(nextQuestion, 10);
+    }
+}
+
+
+function nextQuestion() {
+    currentQuestion++;
+
+
+    if (currentQuestion < questions.length) {
+        displayQuestion();
+    } else {
+        displayResult();
+    }
+}
+
+function displayResult() {
+    container.innerHTML = "";
+
+
+    var resultElement = document.createElement("p");
+    resultElement.className = "result";
+
+
+    if (score >= 3) {
+        resultElement.textContent = "Bravo, tu as réussi le quizz ! Tu as obtenu " + score + " bonnes réponses sur " + questions.length + ".";
+    } else {
+        resultElement.textContent = "Tu as échoué au quiz, ta lettre destinée au Père (Noël) sera envoyée à Yavuz Kutuk, 67000 Strasbourg, ça t’apprendra à ne pas travailler à l’école ! Tu as obtenu " + score + " bonnes réponses sur " + questions.length + ".";
+    } container.appendChild(resultElement);
+}
+
+displayQuestion();
+</script>
 {% endblock %}
