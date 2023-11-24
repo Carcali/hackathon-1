@@ -1,0 +1,27 @@
+.div_contact {
+    position: absolute;
+    top: 3vh;
+}
+
+.titre_form {
+    font-family: var(--primary-font);
+    font-size: var(--h2-size);
+    color: var(--title-color);
+    text-align: center;
+}
+
+.form_contact {
+    background-image: url('public/assets/images/background-form-paper.png');
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.allo-pere-noel_contact {
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 3vh;
+    opacity: 0.2;
+}
