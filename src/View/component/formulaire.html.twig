@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/style.css">
+		<title>ma lettre au père noel</title>
+
+	</head>
+	<body>
+    {{ block content }}
+		<form action="/form.php" method="POST">
+			<div>
+				<label for="nom">Nom :</label>
+				<input type="text" id="nom" name="user_firstname">
+			</div>
+			<div>
+				<label for="prenom">Prenom :</label>
+				<input type="text" id="prenom" name="user_lastname">
+			</div>
+			<div>
+				<label for="city">Ville:</label>
+				<input type="text" id="city" name="user_city">
+			</div>
+			<div>
+				<label for="courriel">Courriel :</label>
+				<input type="email" id="courriel" name="user_email">
+			</div>
+			<div>
+				<label for="age">age :</label>
+				<input type="age" id="age" name="user_age">
+			</div>
+			<div>
+				<label for="message">Message :</label>
+				<textarea id="message" name="user_message"></textarea>
+			</div>
+			<div class="button">
+				<button type="submit">Envoyer votre message</button>
+			</div>
+		</form>
+       {{ endblock }} 
+	</body>
+</html>
