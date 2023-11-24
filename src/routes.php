@@ -13,7 +13,7 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'formulaire' => ['FormController', 'form'],
+    'lettre' => ['FormController', 'lettre'],
     'quizz' => ['PageController', 'quizz',],
     'oups' => ['PageController', 'oups',],
 ];

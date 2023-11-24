@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<section class="section_accueil">
+<div class="div_background">
+<img src="assets/images/background-buildings-3.jpg" class="background-image_accueil">
+</div>
+<div class="uk-align-center uk-container uk-container-medium div_accueil">
+    <h2 class="titre_accueil">Écris ta lettre</h2>
+</div>
+<div class="lettre">
+            <form action="/" method="POST">
+                <div class="formulairelettre">
+                    <div class="formulairelabel">
+                        <label for="prenom">Prénom:</label>
+                        <label for="nom">Nom:</label>
+                        <label for="city">Ville:</label>
+                        <label for="courriel">Courriel:</label>
+                        <label for="age">Âge:</label>
+                        <label for="message">Message:</label>
+                    </div>
+                    <div class="formulaireinput">
+                        <input type="text" id="nom" name="user_firstname" class="input_form">
+                        <input type="text" id="prenom" name="user_lastname" class="input_form">
+                        <input type="text" id="city" name="user_city" class="input_form">
+                        <input type="email" id="courriel" name="user_email" class="input_form">
+                        <input type="age" id="age" name="user_age" class="input_form">
+                        <textarea id="message" name="user_message" cols="58" rows="22"></textarea>
+                    </div>
+                </div>
+                <a href="/oups" class="formulairebutton button">
+                    <img src="assets/images/letterbox.png" alt="envoyer"/>
+                </a>
+            </form>
+        </div>
+</section>
+{% endblock %}

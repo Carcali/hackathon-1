@@ -19,10 +19,15 @@
     padding: 2rem;
     margin: 5rem;
     font-family: var(--secondary-font);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--text-color);
     text-align: left;
+}
+
+.input_radio {
+    margin-bottom: 15px;
+    padding-right: 25px;
 }
 
 .choice {
@@ -30,7 +35,7 @@
 }
 
 .choice input {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .button {
@@ -39,9 +44,10 @@
 }
 
 .result {
-    font-family: var(--text-color);
+    font-family: var(--text-font);
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .valider-la-reponse {
@@ -77,4 +83,21 @@
     text-align: center;
     width: 50%;
     text-decoration: none;
+}
+
+.allo-pere-noel_quizz {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.annotation_quizz {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--p-size);
+    font-weight: 400;
+    color: rgba(255, 255, 0, 0.2);
+    text-align: center;
+    align-self: center;
+    margin-top: -10vh;
 }

@@ -9,8 +9,10 @@
     <h2 class="titre_accueil">Quizz</h2>
 </div>
 <div class="container">
-<img src="">
 </section>
+<div class="allo-pere-noel_quizz">
+<a href="/lettre" class="annotation_quizz">C'est par ici la lettre ma petite chipie</a>
+</div>
 {% endblock %}
 {% block javascript %}
 <script>
@@ -112,7 +114,7 @@ function displayQuestion() {
 }
 
 function checkAnswer() {
-    var buttonElement = document.querySelector(".validate");
+    var buttonElement = document.querySelector(".valider-la-reponse");
 
 
     var selectedChoice = document.querySelector("input[name='choice']:checked");

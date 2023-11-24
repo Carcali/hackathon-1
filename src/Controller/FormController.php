@@ -7,9 +7,9 @@ use App\Controller\AbstractController;
 
 class FormController extends AbstractController
 {
-    public function form(): string
+    public function lettre(): string
     {
-        $errors = [];
+        /*$errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $credentialsForm = array_map('trim', $_POST);
 
@@ -39,7 +39,7 @@ class FormController extends AbstractController
                 $formManager = new FormManager();
                 $formManager->insert($credentialsForm, $userId);
             }
-        }
-        return $this->twig->render('./form.html.twig', ['errors' => $errors]);
+        }*/
+        return $this->twig->render('./lettre.html.twig');
     }
 }

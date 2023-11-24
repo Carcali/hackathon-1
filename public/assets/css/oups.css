@@ -47,7 +47,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 100px 200px;
-  border-color: transparent transparent #A5760C transparent;
+  border-color: transparent transparent #a70101 transparent;
   z-index: 2;
 }
 
@@ -64,7 +64,7 @@
   -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
   transform-origin: 50% 0%;
   transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
-  border-color: #A5760C transparent transparent transparent;
+  border-color: #fa3d3d transparent transparent transparent;
   z-index: 2;
 }
 
@@ -73,7 +73,7 @@
   bottom: 0;
   width: 200px;
   height: 100px;
-  background: #A5760C;
+  background: #650202;
   z-index: 0;
 }
 
@@ -84,7 +84,7 @@
   height: 0;
   border-style: solid;
   border-width: 50px 0 50px 100px;
-  border-color: transparent transparent transparent #A5760C;
+  border-color: transparent transparent transparent #da1414;
   z-index: 2;
 }
 
@@ -105,7 +105,7 @@
 .animated-mail .letter .letter-border {
   height: 10px;
   width: 100%;
-  background: repeating-linear-gradient(-45deg, #99556e, #99556e, 8px, transparent 8px, transparent 18px);
+  background: repeating-linear-gradient(-45deg, #b9a489, #b9a489, 8px, transparent 8px, transparent 18px);
 }
 
 .animated-mail .letter .letter-title {
@@ -113,7 +113,7 @@
   margin-left: 5px;
   height: 10px;
   width: 40%;
-  background: #99556e;
+  background: #b9a489;
 }
 
 .animated-mail .letter .letter-context {
@@ -121,7 +121,7 @@
   margin-left: 5px;
   height: 10px;
   width: 20%;
-  background: #99556e;
+  background: #b9a489;
 }
 
 .animated-mail .letter .letter-stamp {
